@@ -1,5 +1,10 @@
+from scraper import get_page
+
+
 def main():
-    print("Hello from job-monitor!")
+    url = "https://example.com"
+    soup = get_page(url)
+    print(soup.title.text)
 
 
 if __name__ == "__main__":
