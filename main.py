@@ -1,11 +1,12 @@
 from scraper import get_page
+from parser import extract_jobs
 
 
-def main():
-    url = "https://example.com"
-    soup = get_page(url)
-    print(soup.title.text)
+url = "https://example.com"
+
+soup = get_page(url)
 
 
-if __name__ == "__main__":
-    main()
+if soup:
+    jobs = extract_jobs(soup)
+    print(jobs)
